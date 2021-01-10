@@ -21,7 +21,7 @@ void processcdCommand(char* cmd)
 	
 	if (directory == NULL)
 	{
-		printf("%s\n", home_directory); 
+		chdir(getenv("HOME")); 
 	}
 	else
 	{
@@ -33,7 +33,7 @@ void processcdCommand(char* cmd)
 }
 
 
-//history //Done by Bibek
+//history
 
 //initializing the history
 void initialize_history()
@@ -267,3 +267,4 @@ void path_cmd(char* cmd) //execute path command
 		}
 	}
 }
+
